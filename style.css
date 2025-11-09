@@ -35,6 +35,7 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+  height: 100vh;
 }
 
 body * {
@@ -43,7 +44,8 @@ body * {
 }
 
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   /* Se o margin tem quatro chamadas serão seguidas na lista: top, right, bottom, left */
   margin: 150px auto 0px;
   padding: 0 24px;
@@ -190,4 +192,15 @@ header a {
 
 header a:hover {
   color: rgba(255, 255, 255, 0.5);
+}
+
+/* media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
